@@ -12,6 +12,7 @@ class PracticeForm {
     this.address = page.locator("#currentAddress");
     this.submit = page.locator("#submit");
     this.thanksTitle = page.locator("#example-modal-sizes-title-lg");
+    this.closeModelButton = page.locator("#closeLargeModal");
 
     this.maleOption = page.getByText("Male", { exact: true });
 
@@ -123,8 +124,13 @@ class PracticeForm {
     await this.cityDropdown.click();
     await this.page.getByText(city, { exact: true }).click();
   }
+
   async submitForm() {
     await this.submit.click();
+  }
+
+  async closeModel() {
+    await this.closeModelButton.click();
   }
 
   async verifyTableValue(label, expectedValue) {

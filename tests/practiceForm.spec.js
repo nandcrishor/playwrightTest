@@ -48,11 +48,12 @@ test("Fill Practice Form with Dynamic Data", async ({ page }) => {
     "Hobbies",
     `${userData.hobbies[0]}, ${userData.hobbies[1]}`
   );
-  
+
   await form.verifyTableValue("Picture", "testJPG.png");
   await form.verifyTableValue("Address", userData.address);
   await form.verifyTableValue(
     "State and City",
     `${userData.state} ${userData.city}`
   );
+  await form.closeModel();
 });
