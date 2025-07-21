@@ -132,6 +132,7 @@ class PracticeForm {
       .locator("tr td", { hasText: label })
       .locator("xpath=following-sibling::td[1]");
     await expect(valueLocator).toHaveText(expectedValue);
+    console.log("verify values" + expectedValue);
   }
 }
 
