@@ -1,0 +1,11 @@
+# Playwright reports
+.test-results/
+.html-report/
+.playwright/
+.playwright-report/
+test-results/.last-run.json
+# Ignore trace zips
+*.zip
+
+# Ignore last run info
+.test-results/.last-run.json

@@ -33,5 +33,7 @@ test("Fill Practice Form with Dynamic Data", async ({ page }) => {
     console.log(expected);
     expect(cellValues[index].trim()).toBe(expected);
   });
-});
 
+  // const row = await form.searchAndSelectMatchingRow("1", "Cantrell");
+  // console.log(row);
+});

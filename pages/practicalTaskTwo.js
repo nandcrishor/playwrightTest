@@ -14,7 +14,13 @@ class PracticalTaskTwo {
 
     //webTablePage elements
     this.searchBox = page.locator("#searchBox");
-    this.cellsOfFirstRow = page.locator(".rt-tbody .rt-tr-group").first().locator('.rt-td');
+    this.matchingRows = page.locator(
+      '//div[@class="action-buttons"]//ancestor::div[@role="rowgroup"]'
+    );
+    this.cellsOfFirstRow = page
+      .locator(".rt-tbody .rt-tr-group")
+      .first()
+      .locator(".rt-td");
   }
 
   async navigate() {
@@ -40,6 +46,18 @@ class PracticalTaskTwo {
     await this.searchBox.fill(searchInput);
     return await this.cellsOfFirstRow.allTextContents();
   }
+
+//   async searchAndSelectMatchingRow(searchInput, matchingValue) {
+//     await this.searchBox.fill(searchInput);
+//     const rows = await this.matchingRows.all();
+
+//     for (let [i, row] of rows.entries()) {
+//       const texts = await row.locator('[role="gridcell"]').allTextContents();
+//       for (let text of texts) {
+//         if (text === matchingValue) return i
+//       }
+//     }
+//   }
 }
 
 module.exports = PracticalTaskTwo;
