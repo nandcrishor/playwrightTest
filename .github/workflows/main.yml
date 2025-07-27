@@ -1,0 +1,16 @@
+name: first workflow
+
+on: push
+
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+
+    steps: 
+     - uses: actions/checkout@v3
+
+     - name: run a simple github action
+       run: echo "this workflow runs successfully for this particular actions" 
+
+     - name: simulating error 
+       run: echo "error taking place"; exit  1
