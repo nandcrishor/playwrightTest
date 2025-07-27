@@ -100,8 +100,10 @@ class PracticeForm {
 
   async selectSubject(subject) {
     await this.subjectsContainer.click();
-    await this.subjectsInput.fill(subject.slice(0, 1));
-    await this.page.getByText(subject, { exact: true }).click();
+    await this.subjectsInput.fill(subject[0].slice(0, 1));
+    await this.page.getByText(subject[0], { exact: true }).click();
+    await this.subjectsInput.fill(subject[1].slice(0, 1));
+    await this.page.getByText(subject[1], { exact: true }).click();
   }
 
   async selectHobbies() {

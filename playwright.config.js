@@ -8,8 +8,8 @@ export default defineConfig({
     video: "retain-on-failure",
   },
   reporter: [["html", { outputFolder: "playwright-report", open: "never" }]],
-  projects: [
-    { name: "Chromium", use: { browserName: "chromium" } },
-    { name: "Firefox", use: { browserName: "firefox" } },
-  ],
+  // projects: [
+  //   { name: "Chromium", use: { browserName: "chromium" } },
+  //   { name: "Firefox", use: { browserName: "firefox" } },
+  // ],
 });

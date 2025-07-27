@@ -5,14 +5,8 @@ export async function generateTestData() {
     firstName: faker.person.firstName(),
     lastName: faker.person.lastName(),
     email: faker.internet.email(),
-    gender: "Male",
-    mobile: "9" + faker.string.numeric(9),
-    dob: { day: "20", month: "April", year: "1990" },
-    subject: "Maths",
-    hobbies: ["Sports", "Reading"],
-    address: faker.location.streetAddress(),
-    state: "NCR",
-    city: "Delhi",
-    submissionMsg: "Thanks for submitting the form",
+    age: faker.number.int({ min: 18, max: 80 }).toString(),
+    salary: faker.number.int({ min: 50000, max: 150000 }).toString(),
+    dept: faker.commerce.department(),
   };
 }
